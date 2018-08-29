@@ -2,25 +2,22 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>Vue Js Data Binding</title>
+	<title>Vue Js Bangla Tutorial</title>
 </head>
 <body>
 	<div id="root">
-		<h1>Data Binding</h1>
-		<p>Enter Your Input </p>
-		<input type="text" v-model="name">
-		<br>
-		<h2>Input Text is {{ name }}</h2>
+		{{ message }}
 	</div>
 	<script type="text/javascript" src="vue.js" ></script>
 	<script type="text/javascript">
 	 var app= new Vue({
 		el:  "#root",
 		data: {
-			name: "Syed Zaman Mostafiz"
+			message: "Hello World!"
 		}
 	 });
 	</script>
-	
+	<a href="Part-04.html">Part-04</a>
+
 </body>
 </html>
