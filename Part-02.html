@@ -7,10 +7,15 @@
 <body>
 	<script type="text/javascript">
 		console.log("start");
-		console.log("print");
-		console.log("end");
-		function print(s) {
+		//console.log("print");
+		print("print", function () {
+            console.log("end");
+		});
+
+		function print(s, callback) {
 		    setTimeout(function () {
+		        console.log(s);
+		        callback();
             },1000);
         }
 	</script>
