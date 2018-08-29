@@ -6,18 +6,22 @@
 </head>
 <body>
 	<script type="text/javascript">
-		console.log("start");
-		//console.log("print");
-		print("print", function () {
-            console.log("end");
-		});
-
-		function print(s, callback) {
-		    setTimeout(function () {
-		        console.log(s);
-		        callback();
-            },1000);
-        }
+		var myJson = {
+		    "name": "Syed Zaman Mostafiz",
+			"web": "www.zamanstore.ml",
+			"skills" : ["html","css","js","java", "php"],
+			"friends":[
+				{"name": "rahim", "web": "www.rahim.com"},
+				{"name": "korim", "web": "www.korim.com"},
+				{"name": "Tarek", "web": "www.tarek.com"},
+			]
+		}
+		console.log(myJson.name);
+		console.log(myJson.web);
+		console.log(myJson.skills);
+		console.log(myJson.skills[0]);
+		console.log(myJson.friends[1]);
+		console.log(myJson.friends[1].web);
 	</script>
 	<a href="Part-03.html">Part-03</a>
 
