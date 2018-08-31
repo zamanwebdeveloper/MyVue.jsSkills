@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Js Bangla Tutorial</title>
+</head>
+<body>
+	<div id="root">
+		<ul>
+			<li>
+				<a :href="link1.url" target="_blank" v-bind:title="link1.title" > {{ link1.text }}</a>
+			</li>
+			<li>
+				<a :href="link2.url" target="_blank" v-bind:title="link2.title" > {{ link2.text }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="vue.js" ></script>
+	
+	<script type="text/javascript">
+	 var app= new Vue({
+		el:  "#root",
+		data: {
+			link1: {
+			    text: "Facebook", title: "Go to Facebook", url: "https://www.facebook.com"
+			},
+            link2: {
+                text: "Youtube", title: "Go to Youtube", url: "https://www.youtube.com"
+            }
+
+        }
+
+	 });
+
+	</script>
+	<a href="Part-05.html">Part-05</a>
+
+</body>
+</html>
