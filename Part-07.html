@@ -5,13 +5,15 @@
 	<title>Vue Js Bangla Tutorial</title>
 	<style>
 	</style>
+
 </head>
 <body>
 	<div id="root">
 		<h1>Skills</h1><hr>
 		<ul>
 			<li v-for="(skill,i) in skills">
-				{{i+1}}. {{skill.name}}({{skill.experience}})
+				<p v-if="skill.experience>3" >{{i+1}}. {{skill.name}}({{skill.experience}})</p>
+
 			</li>
 		</ul>
 	</div>
@@ -24,12 +26,12 @@
 		data: {
 		    skills:
 				[
-					{name: "HTML", experience:6},
+					{name: "HTML", experience:5},
 					{name: "CSS", experience:5},
 					{name: "JS", experience:4},
 					{name: "PHP",experience:3},
-					{name: "JAVA", experience:2},
-					{name: "NodeJs", experience:1},
+					{name: "JAVA", experience:6},
+					{name: "NodeJs", experience:2},
 				]
 		}
 	 });
