@@ -9,15 +9,11 @@
 </head>
 <body>
 	<div id="root">
-		<h1>Skills</h1><hr>
-		<ul>
-			<li v-for="(skill, i) in skills">
-				<p>
-					{{skill}} <button @click="removeSkill(i)">X</button>
-				</p>
+		<h1>To Do List</h1><hr>
 
-			</li>
-		</ul>
+				<p v-for="(skill, i) in skills">
+					{{i}}) {{skill}} <button @click="removeSkill(i)">Completed</button>
+				</p>
 		<input type="text" v-model="newSkill">
 		<button @click="addNewSkill()">Add</button>
 
@@ -31,7 +27,7 @@
 		data:
 			{
 		    newSkill: "",
-		    skills:["HTML","CSS","JS"]
+		    skills:["Wake up Then Brush Then Morning Breakfast Then Review Plan Then Action"]
 			},
 		methods:
 			{
@@ -48,7 +44,7 @@
      });
 
 	</script>
-	<a href="Part-08.2.html">Part-08.2</a>
+	<a href="Part-09.html">Part-09</a>
 
 </body>
 </html>
