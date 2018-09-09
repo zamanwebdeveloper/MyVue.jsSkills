@@ -9,15 +9,7 @@
 </head>
 <body>
 	<div id="root">
-		<h1>All Payments</h1><hr>
-		<p v-for="(payment, i) in payments">
-			{{payment.name}} ({{payment.amount}})
-		</p>
-		<h1>Unpaid Payments</h1><hr>
-		<p v-for="(payment, i) in unpaidPayments">
-			{{payment.name}} ({{payment.amount}})
-		</p>
-		<h1>Total Amount = {{totalAmount}}</h1>
+		<h1>{{upperCaseName}}</h1>
 	</div>
 
 	<script type="text/javascript" src="vue.js" ></script>
@@ -27,29 +19,14 @@
 		el:  "#root",
 		data:
 			{
-			    payments:[
-					{name: "houserent", amount: 15000, paid: true},
-					{name: "electricity", amount: 1000, paid: false},
-					{name: "gas", amount: 800, paid: true},
-					{name: "water", amount: 700, paid: false},
-					{name: "net", amount: 600, paid: false},
-				]
+				name: "Syed Zaman Mostafiz"
+				profession:"Software Engineering"
 			},
-			computed:{
-		    	unpaidPayments: function () {
-					return this.payments.filter(function (p) {
-						return !p.paid;
-                    });
-                },
-				totalAmount: function () {
-					var sum = 0;
-					for (var i =0; i < this.payments.length; i++)
-					{
-					    sum += this.payments[i].amount;
-					}
-					return sum;
-                }
+		computed:{
+	    	upperCaseName: function () {
+				return this.name.toUpperCase();
 			}
+           }
      });
 
 	</script>
